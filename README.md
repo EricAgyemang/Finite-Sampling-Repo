@@ -4,20 +4,18 @@ Application and theory of *sampling, mathematical sampling; simple, stratified, 
 and cost. Additional topics and applications will be covered in the 4-hour version.
 
 # SAMPLE
-Ideally, a perfect sample would be a *scaled-down* version of the population, mirroring
-every characteristic of the whole population. A good sample will be representative in
-the sense that characteristics of interest in the population can be estimated from the
+Ideally, a perfect sample would be a *scaled-down* version of the population, mirroring every characteristic of the whole population. 
+A good sample will be representative in the sense that characteristics of interest in the population can be estimated from the
 sample with a known degree of accuracy.
 
-•*Observation unit:* An object on which a measurement is taken. This is the basic
-unit of observation, sometimes called an element. In studying human populations,
-observation units are often individuals.
+• *Observation unit:* An object on which a measurement is taken. This is the basic unit of observation, sometimes called an element. In studying 
+   human populations, observation units are often individuals.
 
-•*Target population:* The complete collection of observations we want to study.
-Defining the target population is an important and often difficult part of the study.
+• *Target population:* The complete collection of observations we want to study. Defining the target population is an important and often difficult
+  part of the study.
 
-•*Sampled population:* The collection of all possible observation units that might
-have been chosen in a sample; the population from which the sample was taken.
+• *Sampled population:* The collection of all possible observation units that might have been chosen in a sample; the population from which the 
+  sample was taken.
 
 •*Sampling unit:* A unit that can be selected for a sample. We may want to study
 individuals, but do not have a list of all individuals in the target population. Instead,
