@@ -9,7 +9,7 @@ every characteristic of the whole population. A good sample will be representati
 the sense that characteristics of interest in the population can be estimated from the
 sample with a known degree of accuracy.
 
-1.** Observation unit:** An object on which a measurement is taken. This is the basic
+1.**Observation unit:** An object on which a measurement is taken. This is the basic
 unit of observation, sometimes called an element. In studying human populations,
 observation units are often individuals.
 
