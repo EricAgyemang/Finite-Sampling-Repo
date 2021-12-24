@@ -49,7 +49,7 @@ population of interest.
 • The N units in the universe are denoted by an index set of labels:
         
        U = { 1, 2, 3, ... l\T }
-       Note: Some texts will denote *U = {u1 , u2 , u3 , . . . uN}.
+       Note: Some texts will denote U = {u1 , u2 , u3 , . . . uN}.
 
 • From this universe (or population) a sample of n units is to be taken. Let S represent a
 sample of n units from U.
