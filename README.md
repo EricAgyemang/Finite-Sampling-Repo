@@ -65,6 +65,6 @@ The probability that unit *i* will be included in a sample is denoted πi and is
 inclusion probability for unit i.SRS
 
       NOTE: The detailed sample probability distributionx and their description with real world problems have been provided as 
-      attached to this repository.
+      part of this repository.
 
 
