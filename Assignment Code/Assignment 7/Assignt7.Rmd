@@ -1,0 +1,130 @@
+---
+title: "Untitled"
+author: "Eric Agyemang"
+date: "4/23/2020"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(survey)
+syc<-read.csv("C:/Users/ESI MENSIMA/OneDrive - IL State University/Course books/4th sem/Sampling/Dataset/syc.csv")
+syc$numarr[syc$numarr==99] <- NA 
+syc$probtn[syc$probtn==99] <- NA 
+syc$corrinst[syc$corrinst==99] <- NA 
+syc$agefirst[syc$agefirst==99] <- NA 
+syc$livewith[syc$livewith==99] <- NA 
+syc$age[syc$age==99] <- NA 
+syc$crimtype[syc$crimtype==99] <- NA 
+syc$sex[syc$sex==99] <- NA 
+syc<-na.omit(syc)
+```
+
+Q13)
+
+##Estimating with weight##
+```{r}
+
+stat_stra<- svydesign(id=~1, strata=~stratum, weights =~finalwt, data=syc)
+svyhist(~syc$agefirst,stat_stra)
+
+svymean(~syc$agefirst,stat_stra)
+svyquantile(~agefirst, stat_stra, c(.25,0.5), ci=TRUE)
+```
+
+Mean = 13.08
+Median = 13
+25th percentile = 12
+
+
+##Estimating without weight
+```{r}
+stat_stra1<- svydesign(id=~1, strata=~stratum, data=syc)
+svyhist(~syc$agefirst,stat_stra1)
+
+svymean(~syc$agefirst,stat_stra1)
+svyquantile(~agefirst, stat_stra1, c(.25,0.5), ci=TRUE)
+```
+
+The weights change the estimates very little so there is no much difference between estimating with weight and estimating without weights.
+
+Mean = 13.01
+Median = 13
+25th percentile = 12
+
+
+
+Q14a)
+
+```{r}
+#young<-syc[syc$age <= "14",]
+young=ifelse(syc$age<=14,1,0)
+
+##############proportion#####################
+svymean(~young,stat_stra)
+confint(svymean(~young,stat_stra))
+
+```
+
+
+```{r}
+violence=ifelse(syc$crimtype ==1, 1 ,0)
+
+##############proportion#####################
+svymean(~violence,stat_stra)
+confint(svymean(~violence,stat_stra))
+
+```
+
+```{r}
+live=ifelse(syc$livewith ==3,1,0)
+
+##############proportion#####################
+svymean(~live,stat_stra)
+confint(svymean(~live,stat_stra))
+
+```
+
+
+```{r}
+male=ifelse(syc$sex== 1,1,0)
+
+##############proportion#####################
+svymean(~male,stat_stra)
+confint(svymean(~male,stat_stra))
+
+```
+
+```{r}
+hispanic=ifelse(syc$ethnicty ==1,1,0)
+
+##############proportion#####################
+svymean(~hispanic,stat_stra)
+confint(svymean(~hispanic,stat_stra))
+
+```
+
+
+```{r}
+single=ifelse(syc$livewith<=2,1,0)
+
+##############proportion#####################
+svymean(~single,stat_stra)
+confint(svymean(~single,stat_stra))
+
+```
+
+
+```{r}
+drug=ifelse(syc$everdrug==1,1,0)
+
+##############proportion#####################
+svymean(~drug,stat_stra)
+confint(svymean(~drug,stat_stra))
+
+```
+
+

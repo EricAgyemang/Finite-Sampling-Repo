@@ -1,0 +1,103 @@
+library(survey)
+library(SDaA)
+
+#3)
+Store=c("A","B","C","D")
+Size=c(100,200,300,1000)
+prob=c(1/16,2/16,3/16,10/16)
+ti=c(75,75,75,75)
+T_phi_i=ti/prob
+T_i=(T_phi_i-sum(ti))^2
+dat=cbind.data.frame(Store,Size,prob,ti,T_phi_i,T_i)
+dat
+
+Et_phi =sum(prob*T_phi_i) 
+Et_phi
+Vt_phi = sum(prob*T_i)
+Vt_phi
+
+#4)
+Store=c("A","B","C","D")
+Size=c(100,200,300,1000)
+prob=c(7/16,3/16,3/16,3/16)
+ti=c(11,20,24,245)
+T_phi_i=ti/prob
+T_i=(T_phi_i-sum(ti))^2
+dat=data.frame(Store,Size,prob,ti, T_phi_i,T_i)
+dat
+Et_phi =sum(prob*T_phi_i) 
+Et_phi
+Vt_phi = sum(prob*T_i)
+Vt_phi
+
+
+#9a)
+library(pps)
+set.seed(1000)
+
+T=sum(statepps$landarea)
+T
+samp<-ppswr(statepps$landarea,10)
+samp
+
+sampp<-statepps[c(samp),c(1,2,4,5)]
+sampp
+phi=sampp$landarea/T
+sampl<-cbind(sampp, phi)
+sampl
+
+
+#9b)
+set.seed(1000)
+samp2<-ppswr(statepps$popn,10)
+samp2
+
+T2=sum(statepps$popn)
+T2
+
+sampp2<-statepps[c(samp),c(1,2,6,7)]
+sampp2
+phi=sampp2$popn/T2
+sampl2<-cbind(sampp2,phi)
+sampl2
+
+
+
+#9c)
+
+
+
+
+
+#QUESTION 10 a)
+SamplingWeight<-1/sampl2$phi
+dat<-cbind(sampl2,SamplingWeight)
+stat_pps<- svydesign(id=~1, fpc=~phi, weights =~SamplingWeight, data=sampl2)
+
+####estimate the total #######
+svytotal(~sampl2$counties,stat_pps)
+
+####True total number of counties#######
+library(pps)
+set.seed(1000)
+
+samp<-ppswr(statepps$counties,10)
+samp
+T3=sum(statepps$counties)
+T3
+#QUESTION 10 b)
+sampl2$fpc<-51
+stat_pps<- svydesign(id=~1, fpc=~fpc, data=sampl2)
+svytotal(~sampl2$counties,stat_pps)
+
+#QUESTION 10 26)
+#Select a sample of size 5 with pps and without replacement
+library(pps) 
+
+dpps_ht<-sampford(dd[,2],5)
+dpps_ht
+dpps_ht_joint=sampfordpi(dd[,2],5)  ##return the inclusion prob. and joint inclusion prob.
+dpps_ht_join
+
+
+
