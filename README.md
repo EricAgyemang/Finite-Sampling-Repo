@@ -64,6 +64,7 @@ and a probability P(S) is assigned to every possible smnple S.
 The probability that unit *i* will be included in a sample is denoted πi and is called the
 inclusion probability for unit i.SRS
 
-      NOTE: The detailed sample probability distribution description has been provided as attached to this repository.
+      NOTE: The detailed sample probability distributionx and their description with real world problems have been provided as 
+      attached to this repository.
 
 
