@@ -48,15 +48,15 @@ population of interest.
 
 • The N units in the universe are denoted by an index set of labels:
         
-       *U = { 1, 2, 3, ... l\T }*
-       Note: Some texts will denote *U = {u1 , u2 , u3 , . . . uN}*.
+       U = { 1, 2, 3, ... l\T }
+       Note: Some texts will denote *U = {u1 , u2 , u3 , . . . uN}.
 
 • From this universe (or population) a sample of n units is to be taken. Let S represent a
 sample of n units from U.
 
 • Associated with each of the JV units is a measurable value related to the population
 characteristic of interest. Let Yi be the value associated with unit i, and the population of
-y-values is *{Yi, Y2, ... , YN}*.
+y-values is {Yi, Y2, ... , YN}.
 
 • Sampling designs that m·e based on planned randomness m·e called probability samples,
 and a probability P(S) is assigned to every possible smnple S.
@@ -64,6 +64,6 @@ and a probability P(S) is assigned to every possible smnple S.
 The probability that unit *i* will be included in a sample is denoted πi and is called the
 inclusion probability for unit i.SRS
 
-      *NOTE:* The detailed sample probability distribution description has been provided as attached to this repository.
+      NOTE: The detailed sample probability distribution description has been provided as attached to this repository.
 
 
